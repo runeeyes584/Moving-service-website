@@ -243,9 +243,10 @@
 .section-header h2 {
     font-size: 2.5rem !important;
     font-weight: bold !important;
-    color: #1a1a2e !important;
+    color: #f8f9fa !important;
     margin-bottom: 20px !important;
     line-height: 1.3 !important;
+    text-shadow: 0 1px 2px rgba(0, 0, 0, 0.1) !important;
 }
 
 .section-header p {
@@ -560,4 +561,15 @@
 .footer-cta .cta-btn:hover {
     background: #f8f9fa !important;
     transform: translateY(-2px);
+}
+
+/* Fix features-list icons color for better visibility on light backgrounds */
+.features-list i,
+.pricing-section .features-list i,
+.pricing-card .features-list i {
+    color: #333333 !important;
+}
+
+.benefits-list i {
+    color: #333333 !important;
 }

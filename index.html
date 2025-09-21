@@ -10,6 +10,72 @@
     <link rel="stylesheet" href="assets/css/header.css">
     <link rel="stylesheet" href="assets/css/fixes.css">
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+    <style>
+        /* Force dark icons and text for better visibility on light backgrounds */
+        .features-list i,
+        .benefits-list i,
+        .pricing-section .features-list i,
+        .pricing-card .features-list i {
+            color: #333333 !important;
+        }
+        
+        .features-list li,
+        .benefits-list li,
+        .pricing-section .features-list li,
+        .pricing-card .features-list li {
+            color: #333333 !important;
+        }
+        
+        /* Fix popular badge positioning */
+        .pricing-card {
+            position: relative !important;
+        }
+        
+        .popular-badge {
+            position: absolute !important;
+            top: -15px !important;
+            left: 50% !important;
+            transform: translateX(-50%) !important;
+            background: #4CAF50 !important;
+            color: white !important;
+            padding: 8px 20px !important;
+            border-radius: 20px !important;
+            font-size: 14px !important;
+            font-weight: bold !important;
+            text-transform: uppercase !important;
+            letter-spacing: 1px !important;
+            z-index: 10 !important;
+        }
+        
+        /* Video player styles */
+        .video-player {
+            position: relative !important;
+        }
+        
+        .play-button {
+            cursor: pointer !important;
+            transition: transform 0.3s ease !important;
+        }
+        
+        .play-button:hover {
+            transform: scale(1.1) !important;
+        }
+        
+        #video-iframe {
+            display: none !important;
+        }
+        
+        #video-iframe.active {
+            display: block !important;
+        }
+        
+        #video-iframe iframe {
+            border-radius: 10px !important;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.3) !important;
+            height: 500px !important;
+            min-height: 450px !important;
+        }
+    </style>
 </head>
 <body>
     <!-- Top Bar -->
@@ -32,7 +98,7 @@
     <section class="estimate-section">
         <div class="container">
             <div class="estimate-content">
-                <div class="estimate-text">
+                <div class="estimate-text ">
                     <h3>Get Your Free Moving Estimate Here</h3>
                 </div>
                 <div class="estimate-form">
@@ -51,19 +117,19 @@
                 <div class="benefits-images">
                     <div class="image-grid">
                         <div class="image-item">
-                            <img src="https://via.placeholder.com/200x200/4CAF50/FFFFFF?text=Wrapping" alt="Wrapping furniture">
+                            <img src="/assets/images/furniture-1.jpg" alt="Wrapping furniture">
                         </div>
                         <div class="image-item">
-                            <img src="https://via.placeholder.com/200x200/4CAF50/FFFFFF?text=Assembly" alt="Furniture assembly">
+                            <img src="/assets/images/furniture-2.jpg" alt="Furniture assembly">
                         </div>
                         <div class="image-item">
-                            <img src="https://via.placeholder.com/200x200/4CAF50/FFFFFF?text=Moving" alt="Moving boxes">
+                            <img src="/assets/images/furniture-3.jpg" alt="Moving boxes">
                         </div>
                     </div>
                 </div>
                 <div class="benefits-text">
                     <span class="section-tag">OUR PROMISE</span>
-                    <h2>We promise not to leave any scratches on your nice furniture</h2>
+                    <h2 class="fcolor-primary">We promise not to leave any scratches on your nice furniture</h2>
                     <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris.</p>
                     <ul class="benefits-list">
                         <li><i class="fas fa-check"></i> Dedicated And Professional Movers</li>
@@ -80,7 +146,7 @@
         <div class="cta-overlay"></div>
         <div class="container">
             <div class="cta-content">
-                <h2>We will take care of all your moving needs from A to Z!</h2>
+                <h2>We will take care of all your moving needs from A!</h2>
                 <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
                 <button class="cta-btn">GET STARTED</button>
             </div>
@@ -105,7 +171,7 @@
         <div class="container">
             <div class="section-header">
                 <span class="section-tag">OUR SERVICES</span>
-                <h2>Moving Services For Every Need</h2>
+                <h2 class="fcolor-primary">Moving Services For Every Need</h2>
                 <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
             </div>
             <div class="services-grid">
@@ -201,8 +267,19 @@
         <div class="container">
             <div class="video-content">
                 <div class="video-player">
-                    <div class="play-button">
+                    <div class="play-button" onclick="playVideo()">
                         <i class="fas fa-play"></i>
+                    </div>
+                    <!-- Hidden video iframe -->
+                    <div id="video-iframe">
+                        <iframe 
+                            width="450" 
+                            height="300" 
+                            src="https://www.youtube.com/embed/UNXXrlJwsws?si=As6vThU9E94Wdnbo&autoplay=1"
+                            frameborder="0" 
+                            allow="autoplay; encrypted-media" 
+                            allowfullscreen>
+                        </iframe>
                     </div>
                 </div>
                 <div class="video-text">
@@ -301,7 +378,7 @@
                     </div>
                 </div>
                 <div class="why-choose-image">
-                    <img src="https://via.placeholder.com/500x400/4CAF50/FFFFFF?text=Moving+Team" alt="Professional moving team">
+                    <img src="/assets/images/furniture-2.jpg" alt="Professional moving team">
                     <div class="image-badge">
                         <div class="badge-number">15+</div>
                         <div class="badge-text">Storage Center Locations</div>
@@ -330,9 +407,9 @@
                     </div>
                     <p>"Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam."</p>
                     <div class="testimonial-author">
-                        <img src="https://via.placeholder.com/60x60/4CAF50/FFFFFF?text=AD" alt="Anita D. Conlin">
+                        <img src="/assets/images/furniture-1.jpg" alt="Anita D. Conlin">
                         <div class="author-info">
-                            <h4>Anita D. Conlin</h4>
+                            <h4>Phạm Tuấn Duy</h4>
                             <span>Manager</span>
                         </div>
                     </div>
@@ -347,9 +424,9 @@
                     </div>
                     <p>"Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam."</p>
                     <div class="testimonial-author">
-                        <img src="https://via.placeholder.com/60x60/4CAF50/FFFFFF?text=WS" alt="Wilbur H. Share">
+                        <img src="/assets/images/furniture-1.jpg" alt="Wilbur H. Share">
                         <div class="author-info">
-                            <h4>Wilbur H. Share</h4>
+                            <h4>Nguyễn Trường Sơn</h4>
                             <span>Accounting</span>
                         </div>
                     </div>
@@ -364,10 +441,10 @@
                     </div>
                     <p>"Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam."</p>
                     <div class="testimonial-author">
-                        <img src="https://via.placeholder.com/60x60/4CAF50/FFFFFF?text=RJ" alt="Robert J. Adams">
+                        <img src="/assets/images/furniture-1.jpg" alt="Robert J. Adams">
                         <div class="author-info">
-                            <h4>Robert J. Adams</h4>
-                            <span>CEO of Dragonfly</span>
+                            <h4>Trần Trung Nhân</h4>
+                            <span>CEO of Vingroup</span>
                         </div>
                     </div>
                 </div>
@@ -397,7 +474,7 @@
             <div class="blog-grid">
                 <div class="blog-card">
                     <div class="blog-image">
-                        <img src="https://via.placeholder.com/300x200/4CAF50/FFFFFF?text=Moving+Tips" alt="Moving Tips">
+                        <img src="/assets/images/furniture-1.jpg" alt="Moving Tips">
                         <div class="blog-badge">T1</div>
                     </div>
                     <h3>Tips For an Efficient Move with Professional Movers</h3>
@@ -405,7 +482,7 @@
                 </div>
                 <div class="blog-card">
                     <div class="blog-image">
-                        <img src="https://via.placeholder.com/300x200/4CAF50/FFFFFF?text=Home+Services" alt="Home Services">
+                        <img src="/assets/images/furniture-2.jpg" alt="Home Services">
                         <div class="blog-badge">T2</div>
                     </div>
                     <h3>5 Home Moving Services That Make Moving Easier</h3>
@@ -413,7 +490,7 @@
                 </div>
                 <div class="blog-card">
                     <div class="blog-image">
-                        <img src="https://via.placeholder.com/300x200/4CAF50/FFFFFF?text=Innovative+Services" alt="Innovative Services">
+                        <img src="/assets/images/furniture-3.jpg" alt="Innovative Services">
                         <div class="blog-badge">T3</div>
                     </div>
                     <h3>Innovative Moving Services That Simplify the Process</h3>
@@ -421,7 +498,7 @@
                 </div>
                 <div class="blog-card">
                     <div class="blog-image">
-                        <img src="https://via.placeholder.com/300x200/4CAF50/FFFFFF?text=Stress+Free" alt="Stress Free">
+                        <img src="assets/images/furniture-4.jpg" alt="Stress Free">
                         <div class="blog-badge">T4</div>
                     </div>
                     <h3>The Ultimate Guide to Stress-Free Relocation</h3>
@@ -441,7 +518,7 @@
                     <button class="cta-btn">GET A QUOTE</button>
                 </div>
                 <div class="footer-cta-image">
-                    <img src="https://via.placeholder.com/400x300/4CAF50/FFFFFF?text=Happy+Mover" alt="Happy Mover">
+                    <img src="/assets/images/furniture-3.jpg" alt="Happy Mover">
                 </div>
             </div>
         </div>
@@ -484,9 +561,9 @@
                 <div class="footer-section">
                     <h4>Get In Touch</h4>
                     <div class="contact-details">
-                        <p><i class="fas fa-map-marker-alt"></i> 298 East St, Smalltown, United States 23450</p>
-                        <p><i class="fas fa-phone"></i> +1 (555) 887-6541</p>
-                        <p><i class="fas fa-envelope"></i> hello@yourdomain.com</p>
+                        <p><i class="fas fa-map-marker-alt"></i> Km10, Đường Nguyễn Trãi, Hà Đông, Hà Nội</p>
+                        <p><i class="fas fa-phone"></i>0915140329</p>
+                        <p><i class="fas fa-envelope"></i>tuanduy@gmail.com</p>
                     </div>
                 </div>
             </div>
@@ -496,7 +573,7 @@
                     <a href="#">Terms and Conditions</a>
                 </div>
                 <div class="footer-copyright">
-                    Copyright © 2024 EazeMove by ThemeWagon
+                    Copyright © 2024 EazeMove by Lê Anh Tiến
                 </div>
             </div>
         </div>
@@ -505,6 +582,16 @@
     <script src="assets/js/header.js"></script>
     <script src="assets/js/main.js"></script>
     <script>
+        // Video player functionality
+        function playVideo() {
+            const playButton = document.querySelector('.play-button');
+            const videoIframe = document.getElementById('video-iframe');
+            
+            // Hide play button and show video
+            playButton.style.display = 'none';
+            videoIframe.classList.add('active');
+        }
+        
         // Load header component
         document.addEventListener('DOMContentLoaded', function() {
             fetch('assets/components/header.html')

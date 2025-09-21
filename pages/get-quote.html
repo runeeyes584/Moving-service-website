@@ -1,0 +1,397 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Get a Quote - EazeMove Professional Moving Services</title>
+    <link rel="stylesheet" href="../assets/css/main.css">
+    <link rel="stylesheet" href="../assets/css/header.css">
+    <link rel="stylesheet" href="../assets/css/components.css">
+    <link rel="stylesheet" href="../assets/css/responsive.css">
+    <link rel="stylesheet" href="../assets/css/quote.css">
+    <link rel="stylesheet" href="../assets/css/fixes.css">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+</head>
+<body>
+    <!-- Header -->
+    <div id="header-container"></div>
+
+    <!-- Hero Section -->
+    <section class="quote-hero">
+        <div class="hero-overlay"></div>
+        <div class="container">
+            <div class="quote-hero-content">
+                <h1>Get Your Free Moving Quote</h1>
+                <p>Get an instant, accurate estimate for your move in just a few minutes</p>
+                <div class="hero-stats">
+                    <div class="stat">
+                        <span class="stat-number">10,000+</span>
+                        <span class="stat-label">Happy Customers</span>
+                    </div>
+                    <div class="stat">
+                        <span class="stat-number">50+</span>
+                        <span class="stat-label">Cities Served</span>
+                    </div>
+                    <div class="stat">
+                        <span class="stat-number">24/7</span>
+                        <span class="stat-label">Support</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Quote Form Section -->
+    <section class="quote-form-section">
+        <div class="container">
+            <div class="quote-form-container">
+                <div class="form-header">
+                    <h2>Tell Us About Your Move</h2>
+                    <p>Fill out the form below to get your personalized moving quote</p>
+                </div>
+
+                <form class="quote-form" id="quoteForm">
+                    <!-- Step 1: Move Details -->
+                    <div class="form-step active" data-step="1">
+                        <div class="step-header">
+                            <div class="step-number">1</div>
+                            <div class="step-title">
+                                <h3>Move Details</h3>
+                                <p>Basic information about your move</p>
+                            </div>
+                        </div>
+                        
+                        <div class="form-grid">
+                            <div class="form-group">
+                                <label for="moveType">Type of Move *</label>
+                                <select id="moveType" name="moveType" required>
+                                    <option value="">Select move type</option>
+                                    <option value="local">Local Moving</option>
+                                    <option value="long-distance">Long Distance Moving</option>
+                                    <option value="office">Office Moving</option>
+                                    <option value="storage">Storage Services</option>
+                                    <option value="overseas">Overseas Moving</option>
+                                </select>
+                            </div>
+                            
+                            <div class="form-group">
+                                <label for="moveDate">Preferred Move Date *</label>
+                                <input type="date" id="moveDate" name="moveDate" required>
+                            </div>
+                            
+                            <div class="form-group">
+                                <label for="homeSize">Home Size *</label>
+                                <select id="homeSize" name="homeSize" required>
+                                    <option value="">Select home size</option>
+                                    <option value="studio">Studio (1 room)</option>
+                                    <option value="1-bedroom">1 Bedroom</option>
+                                    <option value="2-bedroom">2 Bedroom</option>
+                                    <option value="3-bedroom">3 Bedroom</option>
+                                    <option value="4-bedroom">4+ Bedroom</option>
+                                    <option value="house">House</option>
+                                </select>
+                            </div>
+                            
+                            <div class="form-group">
+                                <label for="specialItems">Special Items</label>
+                                <select id="specialItems" name="specialItems" multiple>
+                                    <option value="piano">Piano</option>
+                                    <option value="antiques">Antiques</option>
+                                    <option value="artwork">Artwork</option>
+                                    <option value="electronics">Electronics</option>
+                                    <option value="appliances">Large Appliances</option>
+                                </select>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Step 2: Addresses -->
+                    <div class="form-step" data-step="2">
+                        <div class="step-header">
+                            <div class="step-number">2</div>
+                            <div class="step-title">
+                                <h3>Addresses</h3>
+                                <p>Where are you moving from and to?</p>
+                            </div>
+                        </div>
+                        
+                        <div class="addresses-container">
+                            <div class="address-section">
+                                <h4>Moving From</h4>
+                                <div class="form-grid">
+                                    <div class="form-group full-width">
+                                        <label for="fromAddress">Street Address *</label>
+                                        <input type="text" id="fromAddress" name="fromAddress" placeholder="123 Main Street" required>
+                                    </div>
+                                    <div class="form-group">
+                                        <label for="fromCity">City *</label>
+                                        <input type="text" id="fromCity" name="fromCity" placeholder="New York" required>
+                                    </div>
+                                    <div class="form-group">
+                                        <label for="fromState">State *</label>
+                                        <input type="text" id="fromState" name="fromState" placeholder="NY" required>
+                                    </div>
+                                    <div class="form-group">
+                                        <label for="fromZip">ZIP Code *</label>
+                                        <input type="text" id="fromZip" name="fromZip" placeholder="10001" required>
+                                    </div>
+                                </div>
+                            </div>
+                            
+                            <div class="address-section">
+                                <h4>Moving To</h4>
+                                <div class="form-grid">
+                                    <div class="form-group full-width">
+                                        <label for="toAddress">Street Address *</label>
+                                        <input type="text" id="toAddress" name="toAddress" placeholder="456 Oak Avenue" required>
+                                    </div>
+                                    <div class="form-group">
+                                        <label for="toCity">City *</label>
+                                        <input type="text" id="toCity" name="toCity" placeholder="Los Angeles" required>
+                                    </div>
+                                    <div class="form-group">
+                                        <label for="toState">State *</label>
+                                        <input type="text" id="toState" name="toState" placeholder="CA" required>
+                                    </div>
+                                    <div class="form-group">
+                                        <label for="toZip">ZIP Code *</label>
+                                        <input type="text" id="toZip" name="toZip" placeholder="90210" required>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Step 3: Contact Information -->
+                    <div class="form-step" data-step="3">
+                        <div class="step-header">
+                            <div class="step-number">3</div>
+                            <div class="step-title">
+                                <h3>Contact Information</h3>
+                                <p>How can we reach you?</p>
+                            </div>
+                        </div>
+                        
+                        <div class="form-grid">
+                            <div class="form-group">
+                                <label for="firstName">First Name *</label>
+                                <input type="text" id="firstName" name="firstName" placeholder="John" required>
+                            </div>
+                            
+                            <div class="form-group">
+                                <label for="lastName">Last Name *</label>
+                                <input type="text" id="lastName" name="lastName" placeholder="Doe" required>
+                            </div>
+                            
+                            <div class="form-group">
+                                <label for="email">Email Address *</label>
+                                <input type="email" id="email" name="email" placeholder="john@example.com" required>
+                            </div>
+                            
+                            <div class="form-group">
+                                <label for="phone">Phone Number *</label>
+                                <input type="tel" id="phone" name="phone" placeholder="+1 (555) 123-4567" required>
+                            </div>
+                            
+                            <div class="form-group full-width">
+                                <label for="additionalInfo">Additional Information</label>
+                                <textarea id="additionalInfo" name="additionalInfo" placeholder="Any special requirements or notes about your move..." rows="4"></textarea>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Form Navigation -->
+                    <div class="form-navigation">
+                        <button type="button" class="btn btn-outline" id="prevBtn" onclick="changeStep(-1)" style="display: none;">
+                            <i class="fas fa-arrow-left"></i> Previous
+                        </button>
+                        <button type="button" class="btn btn-primary" id="nextBtn" onclick="changeStep(1)">
+                            Next <i class="fas fa-arrow-right"></i>
+                        </button>
+                        <button type="submit" class="btn btn-success" id="submitBtn" style="display: none;">
+                            <i class="fas fa-paper-plane"></i> Get My Quote
+                        </button>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </section>
+
+    <!-- Quote Results Section -->
+    <section class="quote-results" id="quoteResults" style="display: none;">
+        <div class="container">
+            <div class="results-container">
+                <div class="results-header">
+                    <h2>Your Moving Quote</h2>
+                    <p>Here's your personalized estimate</p>
+                </div>
+                
+                <div class="quote-card">
+                    <div class="quote-summary">
+                        <div class="quote-price">
+                            <span class="currency">$</span>
+                            <span class="amount" id="quoteAmount">1,250</span>
+                            <span class="period">estimated</span>
+                        </div>
+                        <div class="quote-details">
+                            <h3 id="quoteTitle">Local Moving Service</h3>
+                            <p id="quoteDescription">Professional moving service for your 2-bedroom apartment</p>
+                        </div>
+                    </div>
+                    
+                    <div class="quote-breakdown">
+                        <h4>Price Breakdown</h4>
+                        <div class="breakdown-list">
+                            <div class="breakdown-item">
+                                <span>Base moving cost</span>
+                                <span id="baseCost">$800</span>
+                            </div>
+                            <div class="breakdown-item">
+                                <span>Distance fee</span>
+                                <span id="distanceFee">$200</span>
+                            </div>
+                            <div class="breakdown-item">
+                                <span>Special items</span>
+                                <span id="specialItemsFee">$150</span>
+                            </div>
+                            <div class="breakdown-item">
+                                <span>Insurance</span>
+                                <span id="insuranceFee">$100</span>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="quote-actions">
+                        <button class="btn btn-primary" onclick="bookMove()">
+                            <i class="fas fa-calendar-check"></i> Book This Move
+                        </button>
+                        <button class="btn btn-outline" onclick="editQuote()">
+                            <i class="fas fa-edit"></i> Edit Quote
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Why Choose Us Section -->
+    <section class="why-choose-us">
+        <div class="container">
+            <div class="section-header">
+                <h2>Why Choose EazeMove?</h2>
+                <p>We make your move stress-free with our professional services</p>
+            </div>
+            
+            <div class="features-grid">
+                <div class="feature-card">
+                    <div class="feature-icon">
+                        <i class="fas fa-shield-alt"></i>
+                    </div>
+                    <h3>Fully Insured</h3>
+                    <p>Your belongings are protected with comprehensive insurance coverage</p>
+                </div>
+                
+                <div class="feature-card">
+                    <div class="feature-icon">
+                        <i class="fas fa-clock"></i>
+                    </div>
+                    <h3>On-Time Service</h3>
+                    <p>We respect your time with punctual and efficient moving services</p>
+                </div>
+                
+                <div class="feature-card">
+                    <div class="feature-icon">
+                        <i class="fas fa-users"></i>
+                    </div>
+                    <h3>Professional Team</h3>
+                    <p>Experienced and trained movers handle your items with care</p>
+                </div>
+                
+                <div class="feature-card">
+                    <div class="feature-icon">
+                        <i class="fas fa-dollar-sign"></i>
+                    </div>
+                    <h3>Transparent Pricing</h3>
+                    <p>No hidden fees - you know exactly what you're paying for</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <div class="footer-logo">
+                        <span class="logo-eaze">Eaze</span><span class="logo-move">Move</span>
+                    </div>
+                    <p>Your trusted partner for stress-free moving experiences. We handle every detail so you can focus on what matters most.</p>
+                    <div class="contact-info">
+                        <p><i class="fas fa-phone"></i> Call Center 24/7 +1 555 787-1234</p>
+                    </div>
+                </div>
+                <div class="footer-section">
+                    <h4>Services</h4>
+                    <ul>
+                        <li><a href="single-service.html?service=local-moving">Local Moving</a></li>
+                        <li><a href="single-service.html?service=long-distance">Long Distance Moving</a></li>
+                        <li><a href="single-service.html?service=storage">Storage Services</a></li>
+                        <li><a href="single-service.html?service=office">Office Moving</a></li>
+                        <li><a href="single-service.html?service=overseas">Overseas Moving</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h4>About</h4>
+                    <ul>
+                        <li><a href="contact.html">Contact Us</a></li>
+                        <li><a href="#faq">FAQs</a></li>
+                        <li><a href="#press">Press</a></li>
+                        <li><a href="blog.html">Our Blog</a></li>
+                        <li><a href="#careers">Careers</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h4>Get In Touch</h4>
+                    <div class="contact-details">
+                        <p><i class="fas fa-map-marker-alt"></i> 9789 Oak St, Smalltown, TX 23456</p>
+                        <p><i class="fas fa-phone"></i> +1 (555) 987-6543</p>
+                        <p><i class="fas fa-envelope"></i> hello@eazemove.com</p>
+                    </div>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <div class="footer-links">
+                    <a href="#privacy">Privacy Policy</a>
+                    <a href="#terms">Terms and Conditions</a>
+                </div>
+                <div class="footer-copyright">
+                    Copyright © 2024 EazeMove by TRIASTHEMES.
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script src="../assets/js/header.js"></script>
+    <script src="../assets/js/quote.js"></script>
+    <script>
+        // Load header component
+        document.addEventListener('DOMContentLoaded', function() {
+            const isPageInSubfolder = window.location.pathname.includes('/pages/');
+            const headerPath = isPageInSubfolder ? '../assets/components/header.html' : 'assets/components/header.html';
+            
+            fetch(headerPath)
+                .then(response => response.text())
+                .then(data => {
+                    document.getElementById('header-container').innerHTML = data;
+                    if (typeof initHeader === 'function') {
+                        initHeader();
+                    }
+                })
+                .catch(error => {
+                    console.error('Error loading header:', error);
+                });
+        });
+    </script>
+</body>
+</html>

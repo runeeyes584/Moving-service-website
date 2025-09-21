@@ -1,0 +1,653 @@
+/* Moving Planner Page - Fixed Styles */
+
+/* Reset and Base Styles */
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    font-family: 'Arial', sans-serif;
+    line-height: 1.6;
+    color: #333;
+}
+
+/* Planner Hero Section */
+.planner-hero {
+    background: linear-gradient(rgba(26, 26, 46, 0.85), rgba(26, 26, 46, 0.85)), 
+                url('https://via.placeholder.com/1920x800/4CAF50/FFFFFF?text=Couple+Packing+Boxes');
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+    height: 80vh;
+    min-height: 600px;
+    display: flex;
+    align-items: center;
+    position: relative;
+    overflow: hidden;
+}
+
+.planner-hero::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: linear-gradient(45deg, rgba(76, 175, 80, 0.1), rgba(26, 26, 46, 0.9));
+    z-index: 1;
+}
+
+.planner-hero-content {
+    text-align: center;
+    color: white;
+    z-index: 2;
+    position: relative;
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+.planner-hero h1 {
+    font-size: 4.5rem;
+    font-weight: bold;
+    margin-bottom: 30px;
+    text-shadow: 2px 2px 8px rgba(0,0,0,0.7);
+    letter-spacing: -1px;
+}
+
+.breadcrumb {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 15px;
+    font-size: 1.2rem;
+    margin-top: 30px;
+    flex-wrap: wrap;
+}
+
+.breadcrumb a {
+    color: white;
+    text-decoration: none;
+    transition: all 0.3s ease;
+    padding: 8px 16px;
+    border-radius: 20px;
+    background: rgba(255,255,255,0.1);
+}
+
+.breadcrumb a:hover {
+    color: #4CAF50;
+    background: rgba(76, 175, 80, 0.2);
+    transform: translateY(-2px);
+}
+
+.breadcrumb .separator {
+    color: #ccc;
+    font-weight: bold;
+    font-size: 1.5rem;
+}
+
+.breadcrumb .current {
+    color: #4CAF50;
+    font-weight: bold;
+    background: rgba(76, 175, 80, 0.2);
+    padding: 8px 16px;
+    border-radius: 20px;
+}
+
+/* Moving Preparation Section */
+.preparation-section {
+    background: white;
+    padding: 120px 0;
+    position: relative;
+}
+
+.preparation-content {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 100px;
+    align-items: center;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+.preparation-image {
+    position: relative;
+    overflow: hidden;
+    border-radius: 20px;
+    box-shadow: 0 20px 60px rgba(0,0,0,0.15);
+}
+
+.preparation-image img {
+    width: 100%;
+    height: 500px;
+    object-fit: cover;
+    transition: transform 0.3s ease;
+}
+
+.preparation-image:hover img {
+    transform: scale(1.05);
+}
+
+.preparation-text {
+    padding-left: 40px;
+}
+
+.preparation-text .section-tag {
+    color: #4CAF50;
+    font-size: 16px;
+    font-weight: bold;
+    text-transform: uppercase;
+    letter-spacing: 3px;
+    margin-bottom: 20px;
+    display: block;
+    position: relative;
+}
+
+.preparation-text .section-tag::before {
+    content: '';
+    position: absolute;
+    top: 50%;
+    left: -30px;
+    width: 20px;
+    height: 3px;
+    background: #4CAF50;
+    transform: translateY(-50%);
+}
+
+.preparation-text h2 {
+    font-size: 3.2rem;
+    color: #1a1a2e;
+    margin-bottom: 30px;
+    line-height: 1.2;
+    font-weight: bold;
+    position: relative;
+}
+
+.preparation-text h2::after {
+    content: '';
+    position: absolute;
+    bottom: -10px;
+    left: 0;
+    width: 80px;
+    height: 4px;
+    background: #4CAF50;
+    border-radius: 2px;
+}
+
+.preparation-text p {
+    font-size: 1.3rem;
+    color: #666;
+    margin-bottom: 40px;
+    line-height: 1.8;
+}
+
+.download-btn {
+    padding: 18px 35px;
+    font-size: 16px;
+    font-weight: bold;
+    text-transform: uppercase;
+    letter-spacing: 1.5px;
+    display: inline-flex;
+    align-items: center;
+    gap: 12px;
+    transition: all 0.3s ease;
+    border-radius: 50px;
+    box-shadow: 0 8px 25px rgba(76, 175, 80, 0.3);
+}
+
+.download-btn:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 12px 35px rgba(76, 175, 80, 0.4);
+}
+
+/* Timeline Sections */
+.timeline-section {
+    padding: 120px 0;
+    position: relative;
+    background: #1a1a2e;
+    overflow: hidden;
+}
+
+.timeline-section::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: linear-gradient(135deg, rgba(76, 175, 80, 0.05), rgba(26, 26, 46, 0.95));
+    z-index: 1;
+}
+
+.timeline-section.alt {
+    background: white;
+}
+
+.timeline-section.alt::before {
+    background: linear-gradient(135deg, rgba(76, 175, 80, 0.02), rgba(255, 255, 255, 0.95));
+}
+
+.timeline-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+    position: relative;
+    z-index: 2;
+}
+
+.timeline-item {
+    display: grid;
+    grid-template-columns: 300px 1fr;
+    gap: 80px;
+    align-items: center;
+    margin-bottom: 120px;
+    position: relative;
+    min-height: 500px;
+}
+
+.timeline-item:last-child {
+    margin-bottom: 0;
+}
+
+.timeline-marker {
+    position: relative;
+    z-index: 3;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.timeline-circle {
+    width: 120px;
+    height: 120px;
+    background: #4CAF50;
+    border: 8px solid white;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0 auto;
+    position: relative;
+    box-shadow: 0 15px 40px rgba(76, 175, 80, 0.4);
+    transition: all 0.4s ease;
+}
+
+.timeline-circle:hover {
+    transform: scale(1.15);
+    box-shadow: 0 20px 50px rgba(76, 175, 80, 0.5);
+}
+
+.timeline-circle::after {
+    content: '';
+    width: 30px;
+    height: 30px;
+    background: white;
+    border-radius: 50%;
+    position: absolute;
+    box-shadow: 0 2px 10px rgba(0,0,0,0.2);
+}
+
+.timeline-label {
+    background: white;
+    color: #1a1a2e;
+    padding: 15px 25px;
+    border-radius: 30px;
+    font-size: 14px;
+    font-weight: bold;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    margin-top: 25px;
+    display: inline-block;
+    white-space: nowrap;
+    box-shadow: 0 8px 25px rgba(0,0,0,0.15);
+    transition: all 0.3s ease;
+    border: 2px solid #4CAF50;
+}
+
+.timeline-label:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 12px 35px rgba(0,0,0,0.2);
+    background: #4CAF50;
+    color: white;
+}
+
+.timeline-line {
+    position: absolute;
+    left: 150px;
+    top: 120px;
+    width: 8px;
+    height: calc(100% + 120px);
+    background: linear-gradient(to bottom, #4CAF50, #45a049, #4CAF50);
+    border-radius: 4px;
+    z-index: 1;
+    box-shadow: 0 0 20px rgba(76, 175, 80, 0.4);
+}
+
+.timeline-item:last-child .timeline-line {
+    display: none;
+}
+
+.timeline-content {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 60px;
+    align-items: start;
+}
+
+.timeline-section.alt .timeline-content {
+    grid-template-columns: 1fr 1fr;
+}
+
+.timeline-section.alt .timeline-image {
+    order: 1;
+}
+
+.timeline-section.alt .timeline-lists {
+    order: 2;
+}
+
+.timeline-text h3 {
+    font-size: 2.8rem;
+    color: white;
+    margin-bottom: 25px;
+    font-weight: bold;
+    line-height: 1.2;
+}
+
+.timeline-section.alt .timeline-text h3 {
+    color: #1a1a2e;
+}
+
+.timeline-text p {
+    font-size: 1.2rem;
+    color: #ccc;
+    margin-bottom: 40px;
+    line-height: 1.7;
+}
+
+.timeline-section.alt .timeline-text p {
+    color: #666;
+}
+
+.timeline-image {
+    position: relative;
+    overflow: hidden;
+    border-radius: 15px;
+    box-shadow: 0 15px 40px rgba(0,0,0,0.2);
+}
+
+.timeline-image img {
+    width: 100%;
+    height: 350px;
+    object-fit: cover;
+    transition: transform 0.3s ease;
+}
+
+.timeline-image:hover img {
+    transform: scale(1.05);
+}
+
+.timeline-lists {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 40px;
+}
+
+.timeline-list h4 {
+    font-size: 1.3rem;
+    color: white;
+    margin-bottom: 25px;
+    font-weight: bold;
+    position: relative;
+    padding-left: 20px;
+}
+
+.timeline-section.alt .timeline-list h4 {
+    color: #1a1a2e;
+}
+
+.timeline-list h4::before {
+    content: '';
+    position: absolute;
+    left: 0;
+    top: 50%;
+    width: 4px;
+    height: 20px;
+    background: #4CAF50;
+    transform: translateY(-50%);
+    border-radius: 2px;
+}
+
+.timeline-list ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.timeline-list li {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    margin-bottom: 15px;
+    font-size: 1.1rem;
+    color: #ccc;
+    transition: all 0.3s ease;
+    padding: 8px 0;
+}
+
+.timeline-section.alt .timeline-list li {
+    color: #666;
+}
+
+.timeline-list li:hover {
+    color: #4CAF50;
+    transform: translateX(5px);
+}
+
+.timeline-list li i {
+    color: #4CAF50;
+    font-size: 16px;
+    width: 20px;
+    text-align: center;
+}
+
+/* CTA Section */
+.cta-section {
+    background: #4CAF50;
+    padding: 100px 0;
+    text-align: center;
+    position: relative;
+    overflow: hidden;
+}
+
+.cta-section::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: linear-gradient(45deg, rgba(255,255,255,0.1), rgba(0,0,0,0.1));
+    z-index: 1;
+}
+
+.cta-content {
+    position: relative;
+    z-index: 2;
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+.cta-content h2 {
+    font-size: 3.5rem;
+    color: white;
+    margin-bottom: 30px;
+    font-weight: bold;
+    text-shadow: 2px 2px 8px rgba(0,0,0,0.3);
+}
+
+.cta-content p {
+    font-size: 1.3rem;
+    color: white;
+    margin-bottom: 40px;
+    line-height: 1.7;
+    opacity: 0.95;
+}
+
+.cta-btn {
+    padding: 20px 40px;
+    font-size: 18px;
+    font-weight: bold;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    background: white;
+    color: #4CAF50;
+    border: none;
+    border-radius: 50px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.2);
+}
+
+.cta-btn:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 15px 40px rgba(0,0,0,0.3);
+    background: #f8f9fa;
+}
+
+/* Scroll to Top Button */
+.scroll-to-top {
+    position: fixed;
+    bottom: 30px;
+    right: 30px;
+    width: 60px;
+    height: 60px;
+    background: #4CAF50;
+    color: white;
+    border: none;
+    border-radius: 50%;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 20px;
+    transition: all 0.3s ease;
+    z-index: 1000;
+    box-shadow: 0 8px 25px rgba(76, 175, 80, 0.4);
+}
+
+.scroll-to-top:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 12px 35px rgba(76, 175, 80, 0.5);
+    background: #45a049;
+}
+
+/* Responsive Design */
+@media (max-width: 1200px) {
+    .preparation-content {
+        gap: 60px;
+    }
+    
+    .timeline-item {
+        gap: 60px;
+    }
+    
+    .timeline-content {
+        gap: 40px;
+    }
+}
+
+@media (max-width: 768px) {
+    .planner-hero h1 {
+        font-size: 3rem;
+    }
+    
+    .preparation-content {
+        grid-template-columns: 1fr;
+        gap: 40px;
+    }
+    
+    .preparation-text {
+        padding-left: 0;
+        text-align: center;
+    }
+    
+    .timeline-item {
+        grid-template-columns: 1fr;
+        gap: 40px;
+        text-align: center;
+    }
+    
+    .timeline-marker {
+        order: 1;
+    }
+    
+    .timeline-content {
+        order: 2;
+        grid-template-columns: 1fr;
+        gap: 30px;
+    }
+    
+    .timeline-lists {
+        grid-template-columns: 1fr;
+        gap: 30px;
+    }
+    
+    .timeline-line {
+        display: none;
+    }
+    
+    .cta-content h2 {
+        font-size: 2.5rem;
+    }
+    
+    .breadcrumb {
+        flex-direction: column;
+        gap: 10px;
+    }
+}
+
+@media (max-width: 480px) {
+    .planner-hero {
+        height: 60vh;
+        min-height: 400px;
+    }
+    
+    .planner-hero h1 {
+        font-size: 2.5rem;
+    }
+    
+    .preparation-text h2 {
+        font-size: 2.2rem;
+    }
+    
+    .timeline-text h3 {
+        font-size: 2.2rem;
+    }
+    
+    .timeline-circle {
+        width: 80px;
+        height: 80px;
+    }
+    
+    .timeline-circle::after {
+        width: 20px;
+        height: 20px;
+    }
+    
+    .cta-content h2 {
+        font-size: 2rem;
+    }
+    
+    .scroll-to-top {
+        width: 50px;
+        height: 50px;
+        bottom: 20px;
+        right: 20px;
+    }
+}
